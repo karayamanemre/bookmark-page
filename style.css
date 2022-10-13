@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap');
+
 :root {
-  --bg-color: #ddd;
-  --text-color: #000;
-  --primary-color: #eee3cb;
-  --shadow-color: #555555;
+  --main-color: #131c24;
+  --second-color: #8b8b8b;
   --border-radius: 10px;
 }
 
@@ -12,7 +11,8 @@ html {
 }
 
 body {
-  background: var(--bg-color);
+  background: url('bg.png');
+  background-size: cover;
   font-family: 'Courier Prime', sans-serif;
 }
 
@@ -23,17 +23,15 @@ main {
 }
 
 h1 {
-  color: var(--text-color);
+  color: var(--main-color);
   padding: 10px;
-  background: var(--bg-color);
   filter: brightness(110%);
   border-radius: var(--border-radius);
-  border: 3px solid #000;
+  border: 3px solid var(--main-color);
   cursor: pointer;
   text-align: center;
   width: 200px;
   user-select: none;
-  box-shadow: 0 0 10px var(--shadow-color);
 }
 
 h1:hover {
@@ -42,9 +40,8 @@ h1:hover {
 
 /* Bookmarks */
 .container {
-  background: #999;
   border-radius: var(--border-radius);
-  border: 3px solid #000;
+  border: 3px solid var(--main-color);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -54,14 +51,13 @@ h1:hover {
 }
 
 .item {
-  background: var(--bg-color);
   filter: brightness(110%);
-  color: var(--text-color);
+  color: var(--main-color);
   border-radius: var(--border-radius);
   padding: 10px;
   margin: 5px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  border: 3px solid #000;
+  border: 3px solid var(--main-color);
 }
 
 .item:hover {
@@ -76,7 +72,7 @@ a {
 
 a:link,
 a:visited {
-  color: var(--text-color);
+  color: var(--main-color);
   text-decoration: none;
 }
 
@@ -120,13 +116,13 @@ a:active {
 }
 
 .modal {
-  background: #fff;
+  background: var(--second-color);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
   max-width: 95%;
   width: 500px;
   animation: modalopen 1s;
   border-radius: var(--border-radius);
-  border: 3px solid #000;
+  border: 3px solid var(--main-color);
 }
 
 @keyframes modalopen {
@@ -150,8 +146,7 @@ a:active {
 }
 
 .modal-header {
-  background: var(--bg-color);
-  color: var(--text-color);
+  color: var(--main-color);
   padding: 15px;
   border-radius: var(--border-radius);
 }
@@ -162,7 +157,7 @@ h3 {
 
 .modal-content {
   padding: 20px;
-  background: #fff;
+  background: var(--second-color);
   border-radius: var(--border-radius);
 }
 
@@ -174,14 +169,14 @@ h3 {
 .form-input {
   width: 97%;
   padding: 5px;
-  border: 2px solid var(--bg-color);
+  border: 2px solid var(--main-color);
   border-radius: var(--border-radius);
   display: block;
   outline: none;
 }
 
 .form-label {
-  color: var(--text-color);
+  color: var(--main-color);
   display: block;
 }
 
@@ -189,13 +184,13 @@ button {
   cursor: pointer;
   font-family: 'Courier Prime', sans-serif;
   color: var(--text-color);
-  background: var(--bg-color);
+  background: #fff;
   font-size: 1.1rem;
   height: 40px;
   width: 100px;
   border-radius: var(--border-radius);
   padding: 5px;
-  border: 2px solid #000;
+  border: 2px solid var(--main-color);
 }
 
 button:hover {
