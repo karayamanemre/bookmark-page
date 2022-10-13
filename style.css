@@ -11,8 +11,9 @@ html {
 }
 
 body {
-  background: url('bg.png');
-  background-size: cover;
+  background: url('bg.svg');
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
   font-family: 'Courier Prime', sans-serif;
 }
 
@@ -24,6 +25,7 @@ main {
 
 h1 {
   color: var(--main-color);
+  background: #fff;
   padding: 10px;
   filter: brightness(110%);
   border-radius: var(--border-radius);
@@ -48,11 +50,15 @@ h1:hover {
   justify-content: center;
   padding: 10px; 
   width: 90vw;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
 }
 
 .item {
   filter: brightness(110%);
   color: var(--main-color);
+  background: #fff;
   border-radius: var(--border-radius);
   padding: 10px;
   margin: 5px;
